@@ -3,7 +3,6 @@ name: CI
 on:
   push:
     branches: [ main ]
-
   pull_request:
     branches: [ main ]
 
@@ -21,7 +20,7 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
-      - name: Lint (flake8)
+      - name: Lint flake8
         run: flake8 . --max-line-length=100
 
       - name: Testes com cobertura
